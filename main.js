@@ -1,7 +1,7 @@
 class Usuarios {
     constructor(nombre, montoAdeu) {
         this.nombre = nombre,
-        this.monto = montoAdeu
+        this.montoAdeudado = montoAdeu
     }
 }
 
@@ -17,11 +17,26 @@ boton.addEventListener("click", () => {
         
         let user = new Usuarios(
             this.nombre = prompt("ingreser nombre del participante."),
-            this.monto = deuda / cantUsers
+            this.montoAdeudado = deuda / cantUsers
             );
             almacenamiento.push(user)
         };
     
-    console.log(almacenamiento)
+    console.table(almacenamiento);
 
+    dibujarPantalla()
 });
+
+function dibujarPantalla(){
+    //TODO: Tenemos que pintar tarjetas aca con los nombres de los pibitos.
+    console.log("nos ejecutamo perro primo")
+    
+    let print = document.getElementById("print")
+
+    print.innerHTML = `
+    <div>
+        <h3>Tenemos que poder pintar aca a las personas en tarjetitas!
+    </div>
+    `
+    
+};
